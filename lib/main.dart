@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:yum_quick/core/utils/app_router.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class YumQuick extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(textTheme: GoogleFonts.leagueSpartanTextTheme()),
       routerConfig: AppRouter.router,
     );
   }

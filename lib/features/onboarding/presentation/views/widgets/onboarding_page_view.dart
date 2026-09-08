@@ -1,10 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:yum_quick/core/utils/app_images.dart';
+import 'package:yum_quick/features/onboarding/presentation/views/widgets/page_view_item.dart';
 
 class OnboardingPageView extends StatelessWidget {
   const OnboardingPageView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return PageView(children: []);
+    return PageView(
+      children: [
+        PageViewItem(
+          backgroundImage: Assets.imagesOnboarding1,
+          icon: Assets.imagesIcon1,
+          title: 'Order for Food',
+          subTitle:
+              'Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+        ),
+        PageViewItem(
+          backgroundImage: Assets.imagesOnboarding2,
+          icon: Assets.imagesIcon2,
+          title: 'Easy Payment',
+          subTitle:
+              'Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+        ),
+        PageViewItem(
+          backgroundImage: Assets.imagesOnboarding3,
+          icon: Assets.imagesIcon3,
+          title: 'Fast Delivery',
+          subTitle:
+              'Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+        ),
+      ],
+    );
   }
 }
