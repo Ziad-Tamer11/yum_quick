@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:yum_quick/constants.dart';
+import 'package:yum_quick/core/services/shared_preferences_singleton.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/utils/app_router.dart';
 
@@ -15,9 +17,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(milliseconds: 2200), () {
-      if (mounted) context.pushReplacement(AppRouter.kOnboardingView);
-    });
+    executeNavigation();
   }
 
   @override
@@ -39,5 +39,17 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         ),
       ),
     );
+  }
+
+  void executeNavigation() {
+    Future.delayed(const Duration(milliseconds: 2200), () {
+      if (!mounted) return;
+      final hasSeenOnboarding = Prefs.getBool(kIsOnboardingSeen);
+      if (hasSeenOnboarding) {
+        context.pushReplacement(AppRouter.kLoginViewView);
+      } else {
+        context.pushReplacement(AppRouter.kOnboardingView);
+      }
+    });
   }
 }

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:yum_quick/core/services/shared_preferences_singleton.dart';
 import 'package:yum_quick/core/utils/app_router.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Prefs.init();
   runApp(const YumQuick());
 }
 
