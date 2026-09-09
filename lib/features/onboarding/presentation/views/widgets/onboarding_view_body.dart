@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_router.dart';
-import 'package:yum_quick/core/widgets/custom_button.dart';
+import 'package:yum_quick/core/widgets/custom_text_button.dart';
 import 'package:yum_quick/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
 
 class OnboardingViewBody extends StatefulWidget {
@@ -63,7 +63,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      CustomButton(
+                      CustomTextButton(
                         title: currentPage == 2 ? 'Get Started' : 'Next',
                         onPressed: () {
                           if (currentPage == 2) {

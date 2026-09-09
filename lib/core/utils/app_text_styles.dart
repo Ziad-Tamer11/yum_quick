@@ -7,10 +7,17 @@ class TextStyles {
     fontWeight: FontWeight.bold,
     fontSize: 24,
   );
+
+  static TextStyle medium24 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w500,
+    fontSize: 24,
+  );
+
   static TextStyle medium14 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w500,
     fontSize: 14,
   );
+
   static TextStyle bold17 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.bold,
     fontSize: 17,

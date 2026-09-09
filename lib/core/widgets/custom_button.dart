@@ -3,23 +3,33 @@ import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.onPressed, required this.title});
-  final VoidCallback? onPressed;
+  const CustomButton({
+    super.key,
+    required this.title,
+    this.onPressed,
+    this.backgroundColor = AppColors.orangeBase,
+    this.titleColor = AppColors.white,
+  });
   final String title;
+  final VoidCallback? onPressed;
+  final Color? backgroundColor;
+  final Color? titleColor;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 133,
-      child: TextButton(
-        style: TextButton.styleFrom(
-          backgroundColor: AppColors.orangeBase,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(100),
-            side: BorderSide(width: 1, color: AppColors.orangeBase),
-          ),
-        ),
+      width: 207,
+      height: 45,
+      child: ElevatedButton(
         onPressed: onPressed,
-        child: Text(title, style: TextStyles.medium17),
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          backgroundColor: backgroundColor,
+        ),
+        child: Text(
+          title,
+          style: TextStyles.medium24.copyWith(color: titleColor),
+        ),
       ),
     );
   }
