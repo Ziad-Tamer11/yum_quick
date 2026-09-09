@@ -9,6 +9,12 @@ class TextStyles {
     color: AppColors.primaryFont,
   );
 
+  static TextStyle semiBold24 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w600,
+    fontSize: 24,
+    color: AppColors.primaryFont,
+  );
+
   static TextStyle medium24 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w500,
     fontSize: 24,
@@ -25,6 +31,13 @@ class TextStyles {
     fontWeight: FontWeight.w500,
     fontSize: 14,
     color: AppColors.primaryFont,
+  );
+
+  static TextStyle light14 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w300,
+    fontSize: 14,
+    height: 1,
+    color: const Color(0xFF252525),
   );
 
   static TextStyle bold17 = GoogleFonts.leagueSpartan(
@@ -50,6 +63,12 @@ class TextStyles {
   static TextStyle semiBold15 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w600,
     fontSize: 15,
+    color: AppColors.primaryFont,
+  );
+
+  static TextStyle medium20 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w500,
+    fontSize: 20,
     color: AppColors.primaryFont,
   );
 }
