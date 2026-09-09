@@ -26,8 +26,17 @@ class OnboardingViewBody extends StatelessWidget {
                   DotsIndicator(
                     dotsCount: 3,
                     decorator: DotsDecorator(
+                      color: AppColors.yellowLight,
                       activeColor: AppColors.orangeBase,
-                      shape: CircleBorder(),
+                      size: const Size(20, 4),
+                      activeSize: const Size(20, 4),
+                      spacing: const EdgeInsets.symmetric(horizontal: 4),
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(4)),
+                      ),
+                      activeShape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(4)),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 20),

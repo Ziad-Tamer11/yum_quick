@@ -25,7 +25,7 @@ class TextStyles {
   );
 
   static TextStyle onboardingTitle = GoogleFonts.inter(
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w900,
     fontSize: 24,
     color: AppColors.orangeBase,
   );
