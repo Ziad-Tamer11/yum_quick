@@ -4,8 +4,32 @@ import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/widgets/custom_button.dart';
 import 'package:yum_quick/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
 
-class OnboardingViewBody extends StatelessWidget {
+class OnboardingViewBody extends StatefulWidget {
   const OnboardingViewBody({super.key});
+
+  @override
+  State<OnboardingViewBody> createState() => _OnboardingViewBodyState();
+}
+
+class _OnboardingViewBodyState extends State<OnboardingViewBody> {
+  late PageController pageController;
+  var currentPage = 0;
+  @override
+  void initState() {
+    pageController = PageController();
+    pageController.addListener(() {
+      setState(() {
+        currentPage = pageController.page!.round();
+      });
+    });
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
