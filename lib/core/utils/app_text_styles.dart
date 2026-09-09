@@ -6,21 +6,25 @@ class TextStyles {
   static TextStyle bold24 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.bold,
     fontSize: 24,
+    color: AppColors.primaryFont,
   );
 
   static TextStyle medium24 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w500,
     fontSize: 24,
+    color: AppColors.primaryFont,
   );
 
   static TextStyle medium14 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w500,
     fontSize: 14,
+    color: AppColors.primaryFont,
   );
 
   static TextStyle bold17 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.bold,
     fontSize: 17,
+    color: AppColors.primaryFont,
   );
 
   static TextStyle medium17 = GoogleFonts.leagueSpartan(
@@ -40,5 +44,6 @@ class TextStyles {
   static TextStyle semiBold15 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w600,
     fontSize: 15,
+    color: AppColors.primaryFont,
   );
 }
