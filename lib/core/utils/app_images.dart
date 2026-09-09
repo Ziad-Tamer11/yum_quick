@@ -41,5 +41,13 @@ class Assets {
   /// Assets for imagesOnboarding3
   /// assets/images/onboarding_3.png
   static const String imagesOnboarding3 = "assets/images/onboarding_3.png";
+
+  /// Assets for imagesVisibilityOff
+  /// assets/images/visibility_off.svg
+  static const String imagesVisibilityOff = "assets/images/visibility_off.svg";
+
+  /// Assets for imagesVisibilityOn
+  /// assets/images/visibility_on.svg
+  static const String imagesVisibilityOn = "assets/images/visibility_on.svg";
 }
 

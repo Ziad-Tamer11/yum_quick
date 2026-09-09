@@ -3,7 +3,9 @@ import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
 import 'package:yum_quick/core/widgets/custom_app_bar.dart';
 import 'package:yum_quick/core/widgets/custom_text_form_field.dart';
+import 'package:yum_quick/core/widgets/password_filed.dart';
 import 'package:yum_quick/features/auth/presentation/views/widgets/custom_text.dart';
+import 'package:yum_quick/features/auth/presentation/views/widgets/forget_password.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -48,6 +50,11 @@ class LoginViewBody extends StatelessWidget {
                     keyboardType: TextInputType.emailAddress,
                     hintText: 'example@example.com',
                   ),
+                  const SizedBox(height: 22),
+                  CustomText(text: 'Password '),
+                  PasswordField(),
+                  SizedBox(height: 14),
+                  ForgetPassword(onTap: () {}),
                 ],
               ),
             ),

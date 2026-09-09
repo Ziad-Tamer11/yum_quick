@@ -11,6 +11,7 @@ class CustomTextFormField extends StatelessWidget {
     required this.keyboardType,
     this.onSaved,
     this.obscureText = false,
+    this.obscuringCharacter = '*',
     this.enabled = true, // ← جديد
   });
 
@@ -20,6 +21,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextInputType keyboardType;
   final void Function(String?)? onSaved;
   final bool obscureText;
+  final String obscuringCharacter;
   final bool enabled; // ← جديد
 
   @override
@@ -37,13 +39,14 @@ class CustomTextFormField extends StatelessWidget {
       keyboardType: keyboardType,
       onSaved: onSaved,
       obscureText: obscureText,
+      obscuringCharacter: obscuringCharacter,
       decoration: InputDecoration(
         filled: true,
         fillColor: AppColors.yellowLight,
         hintText: hintText,
         hintStyle: TextStyles.regular20.copyWith(
           height: 0.70,
-          color: AppColors.primaryFont.withOpacity(0.7),
+          color: AppColors.primaryFont.withValues(alpha: 0.7),
         ),
         errorStyle: TextStyles.regular20.copyWith(color: AppColors.red),
         suffixIcon: suffixIcon,
