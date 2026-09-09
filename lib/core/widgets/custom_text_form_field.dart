@@ -33,6 +33,7 @@ class CustomTextFormField extends StatelessWidget {
         }
         return null;
       },
+      style: TextStyles.regular20.copyWith(height: 0.70),
       keyboardType: keyboardType,
       onSaved: onSaved,
       obscureText: obscureText,
@@ -40,7 +41,10 @@ class CustomTextFormField extends StatelessWidget {
         filled: true,
         fillColor: AppColors.yellowLight,
         hintText: hintText,
-        hintStyle: TextStyles.regular20.copyWith(height: 0.70),
+        hintStyle: TextStyles.regular20.copyWith(
+          height: 0.70,
+          color: AppColors.primaryFont.withOpacity(0.7),
+        ),
         errorStyle: TextStyles.regular20.copyWith(color: AppColors.red),
         suffixIcon: suffixIcon,
         border: buildBorder(),
