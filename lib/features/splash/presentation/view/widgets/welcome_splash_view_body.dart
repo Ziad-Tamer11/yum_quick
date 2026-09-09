@@ -22,7 +22,7 @@ class WelcomeSplashViewBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 49),
           child: Text(
             textAlign: TextAlign.center,
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+            'Craving something delicious? Sign in or create an account to get started.',
             style: TextStyles.medium14.copyWith(color: AppColors.secondaryFont),
           ),
         ),

@@ -45,7 +45,7 @@ class LoginViewBody extends StatelessWidget {
                   Text('Welcome', style: TextStyles.semiBold24),
                   const SizedBox(height: 19),
                   Text(
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                    'Log in to your account to keep ordering your favorite meals from all the restaurants you love.',
                     style: TextStyles.light14,
                   ),
                   const SizedBox(height: 40),

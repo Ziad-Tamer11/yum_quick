@@ -15,7 +15,7 @@ class OnboardingPageView extends StatelessWidget {
           icon: Assets.imagesIcon1,
           title: 'Order for Food',
           subTitle:
-              'Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+              'Browse hundreds of restaurants and discover fresh, delicious meals ready to order in just a few taps.',
           isVisible: true,
           pageController: pageController,
         ),
@@ -24,7 +24,7 @@ class OnboardingPageView extends StatelessWidget {
           icon: Assets.imagesIcon2,
           title: 'Easy Payment',
           subTitle:
-              'Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+              'Choose the payment method that suits you best and check out safely in one quick, secure step.',
           isVisible: true,
           pageController: pageController,
         ),
@@ -33,7 +33,7 @@ class OnboardingPageView extends StatelessWidget {
           icon: Assets.imagesIcon3,
           title: 'Fast Delivery',
           subTitle:
-              'Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+              'Track your order live from the kitchen to your door and know exactly when your food will arrive.',
           isVisible: false,
           pageController: pageController,
         ),
