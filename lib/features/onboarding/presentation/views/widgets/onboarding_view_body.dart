@@ -36,7 +36,9 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned.fill(child: OnboardingPageView()),
+          Positioned.fill(
+            child: OnboardingPageView(pageController: pageController),
+          ),
           Positioned(
             left: 0,
             right: 0,
