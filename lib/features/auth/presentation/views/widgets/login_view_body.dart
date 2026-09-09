@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
 import 'package:yum_quick/core/widgets/custom_app_bar.dart';
+import 'package:yum_quick/core/widgets/custom_text_form_field.dart';
 import 'package:yum_quick/features/auth/presentation/views/widgets/custom_text.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -43,6 +44,10 @@ class LoginViewBody extends StatelessWidget {
                   ),
                   const SizedBox(height: 46),
                   CustomText(text: 'Email or Mobile Number'),
+                  CustomTextFormField(
+                    keyboardType: TextInputType.emailAddress,
+                    hintText: 'example@example.com',
+                  ),
                 ],
               ),
             ),

@@ -71,4 +71,10 @@ class TextStyles {
     fontSize: 20,
     color: AppColors.primaryFont,
   );
+
+  static TextStyle regular20 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    color: AppColors.primaryFont,
+  );
 }
