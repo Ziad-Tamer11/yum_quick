@@ -12,18 +12,7 @@ class OnboardingViewBody extends StatefulWidget {
 }
 
 class _OnboardingViewBodyState extends State<OnboardingViewBody> {
-  late PageController pageController;
-  var currentPage = 0;
-  @override
-  void initState() {
-    pageController = PageController();
-    pageController.addListener(() {
-      setState(() {
-        currentPage = pageController.page!.round();
-      });
-    });
-    super.initState();
-  }
+  final pageController = PageController();
 
   @override
   void dispose() {
@@ -45,43 +34,50 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
             bottom: 0,
             child: SafeArea(
               top: false,
-              child: Column(
-                mainAxisSize: MainAxisSize
-                    .min, // يمنع الـ Column من محاولة ياخد مساحة زيادة
-                children: [
-                  DotsIndicator(
-                    dotsCount: 3,
-                    position: currentPage.toDouble(),
-                    decorator: DotsDecorator(
-                      color: AppColors.yellowLight,
-                      activeColor: AppColors.orangeBase,
-                      size: const Size(20, 4),
-                      activeSize: const Size(20, 4),
-                      spacing: const EdgeInsets.symmetric(horizontal: 4),
-                      shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(4)),
+              child: AnimatedBuilder(
+                animation: pageController,
+                builder: (context, _) {
+                  final currentPage = pageController.hasClients
+                      ? (pageController.page ?? 0).round()
+                      : 0;
+                  return Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      DotsIndicator(
+                        dotsCount: 3,
+                        position: currentPage.toDouble(),
+                        decorator: DotsDecorator(
+                          color: AppColors.yellowLight,
+                          activeColor: AppColors.orangeBase,
+                          size: const Size(20, 4),
+                          activeSize: const Size(20, 4),
+                          spacing: const EdgeInsets.symmetric(horizontal: 4),
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(4)),
+                          ),
+                          activeShape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(4)),
+                          ),
+                        ),
                       ),
-                      activeShape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(4)),
+                      const SizedBox(height: 20),
+                      CustomButton(
+                        title: currentPage == 2 ? 'Get Started' : 'Next',
+                        onPressed: () {
+                          if (currentPage == 2) {
+                            // TODO: navigate to auth once it's built
+                          } else {
+                            pageController.nextPage(
+                              duration: const Duration(milliseconds: 300),
+                              curve: Curves.easeInOut,
+                            );
+                          }
+                        },
                       ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  CustomButton(
-                    title: currentPage == 2 ? 'Get Started' : 'Next',
-                    onPressed: () {
-                      if (currentPage == 2) {
-                        // TODO: navigate to auth once it's built
-                      } else {
-                        pageController.nextPage(
-                          duration: const Duration(milliseconds: 300),
-                          curve: Curves.easeInOut,
-                        );
-                      }
-                    },
-                  ),
-                  const SizedBox(height: 30),
-                ],
+                      const SizedBox(height: 30),
+                    ],
+                  );
+                },
               ),
             ),
           ),
