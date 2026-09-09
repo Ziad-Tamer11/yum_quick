@@ -21,8 +21,8 @@ class LoginViewBody extends StatelessWidget {
     return Column(
       children: [
         SizedBox(height: MediaQuery.of(context).size.height * .055),
-        CustomAppBar(title: 'Log In'),
-        SizedBox(height: 59),
+        const CustomAppBar(title: 'Log In'),
+        const SizedBox(height: 59),
         Expanded(
           child: Container(
             width: double.infinity,
