@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
+import 'package:yum_quick/core/widgets/custom_button.dart';
 import 'package:yum_quick/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
 
 class OnboardingViewBody extends StatelessWidget {
@@ -29,7 +30,9 @@ class OnboardingViewBody extends StatelessWidget {
                       shape: CircleBorder(),
                     ),
                   ),
-                  /* button */
+                  const SizedBox(height: 20),
+                  CustomButton(title: 'Next', onPressed: () {}),
+                  const SizedBox(height: 30),
                 ],
               ),
             ),

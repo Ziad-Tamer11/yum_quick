@@ -12,8 +12,16 @@ class TextStyles {
     fontSize: 14,
   );
   static TextStyle bold17 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.bold,
+    fontSize: 17,
+  );
+
+  static TextStyle medium17 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w500,
     fontSize: 17,
+    color: AppColors.white,
+    height: 1.18,
+    letterSpacing: -0.09,
   );
 
   static TextStyle onboardingTitle = GoogleFonts.inter(
