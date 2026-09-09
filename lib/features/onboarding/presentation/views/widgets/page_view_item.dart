@@ -23,11 +23,14 @@ class PageViewItem extends StatelessWidget {
           right: 0,
           left: 0,
           child: Container(
-            height: MediaQuery.of(context).size.height * 0.41,
+            height: MediaQuery.of(context).size.height * 0.40,
             decoration: ShapeDecoration(
               color: const Color(0xFFF8F8F8),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                ),
               ),
             ),
             child: Column(
