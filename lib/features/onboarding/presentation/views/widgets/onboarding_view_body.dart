@@ -51,6 +51,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                 children: [
                   DotsIndicator(
                     dotsCount: 3,
+                    position: currentPage.toDouble(),
                     decorator: DotsDecorator(
                       color: AppColors.yellowLight,
                       activeColor: AppColors.orangeBase,
@@ -66,7 +67,19 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  CustomButton(title: 'Next', onPressed: () {}),
+                  CustomButton(
+                    title: currentPage == 2 ? 'Get Started' : 'Next',
+                    onPressed: () {
+                      if (currentPage == 2) {
+                        // TODO: navigate to auth once it's built
+                      } else {
+                        pageController.nextPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                        );
+                      }
+                    },
+                  ),
                   const SizedBox(height: 30),
                 ],
               ),

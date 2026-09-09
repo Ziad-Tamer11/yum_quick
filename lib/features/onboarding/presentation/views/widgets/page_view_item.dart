@@ -12,9 +12,11 @@ class PageViewItem extends StatelessWidget {
     required this.title,
     required this.subTitle,
     required this.isVisible,
+    required this.pageController,
   });
   final String backgroundImage, icon, title, subTitle;
   final bool isVisible;
+  final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -62,17 +64,26 @@ class PageViewItem extends StatelessWidget {
           child: Positioned(
             right: 35,
             top: 21,
-            child: Row(
-              spacing: 7,
-              children: [
-                Text(
-                  'Skip',
-                  style: TextStyles.semiBold15.copyWith(
-                    color: AppColors.orangeBase,
+            child: GestureDetector(
+              onTap: () {
+                pageController.animateToPage(
+                  2,
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.easeInOut,
+                );
+              },
+              child: Row(
+                spacing: 7,
+                children: [
+                  Text(
+                    'Skip',
+                    style: TextStyles.semiBold15.copyWith(
+                      color: AppColors.orangeBase,
+                    ),
                   ),
-                ),
-                SvgPicture.asset(Assets.imagesNextIconArrow),
-              ],
+                  SvgPicture.asset(Assets.imagesNextIconArrow),
+                ],
+              ),
             ),
           ),
         ),

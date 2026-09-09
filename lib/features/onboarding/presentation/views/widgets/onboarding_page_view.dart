@@ -16,7 +16,8 @@ class OnboardingPageView extends StatelessWidget {
           title: 'Order for Food',
           subTitle:
               'Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
-          isVisible: pageController.page!.round() == 0,
+          isVisible: true,
+          pageController: pageController,
         ),
         PageViewItem(
           backgroundImage: Assets.imagesOnboarding2,
@@ -24,7 +25,8 @@ class OnboardingPageView extends StatelessWidget {
           title: 'Easy Payment',
           subTitle:
               'Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
-          isVisible: pageController.page!.round() == 1,
+          isVisible: true,
+          pageController: pageController,
         ),
         PageViewItem(
           backgroundImage: Assets.imagesOnboarding3,
@@ -32,7 +34,8 @@ class OnboardingPageView extends StatelessWidget {
           title: 'Fast Delivery',
           subTitle:
               'Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
-          isVisible: pageController.page!.round() != 2,
+          isVisible: false,
+          pageController: pageController,
         ),
       ],
     );
