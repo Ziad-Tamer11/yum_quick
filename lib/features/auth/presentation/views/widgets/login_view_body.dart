@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
+import 'package:yum_quick/core/utils/app_router.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
 import 'package:yum_quick/core/widgets/custom_app_bar.dart';
 import 'package:yum_quick/core/widgets/custom_button.dart';
@@ -78,7 +80,15 @@ class LoginViewBody extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 30),
-                  Center(child: PromptText(onTap: () {})),
+                  Center(
+                    child: PromptText(
+                      onTap: () {
+                        context.push(AppRouter.kSignUpViewView);
+                      },
+                      text1: "Don't have an account? ",
+                      text2: 'Sign Up',
+                    ),
+                  ),
                 ],
               ),
             ),
