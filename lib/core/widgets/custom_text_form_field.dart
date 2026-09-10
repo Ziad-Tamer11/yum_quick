@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
 
@@ -13,6 +14,7 @@ class CustomTextFormField extends StatelessWidget {
     this.obscureText = false,
     this.obscuringCharacter = '*',
     this.enabled = true, // ← جديد
+    this.inputFormatters,
   });
 
   final TextEditingController? controller;
@@ -23,6 +25,7 @@ class CustomTextFormField extends StatelessWidget {
   final bool obscureText;
   final String obscuringCharacter;
   final bool enabled; // ← جديد
+  final List<TextInputFormatter>? inputFormatters;
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +43,7 @@ class CustomTextFormField extends StatelessWidget {
       onSaved: onSaved,
       obscureText: obscureText,
       obscuringCharacter: obscuringCharacter,
+      inputFormatters: inputFormatters,
       decoration: InputDecoration(
         filled: true,
         fillColor: AppColors.yellowLight,

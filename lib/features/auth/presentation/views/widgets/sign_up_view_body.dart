@@ -4,6 +4,7 @@ import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/utils/app_router.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
+import 'package:yum_quick/core/utils/date_input_formatter.dart';
 import 'package:yum_quick/core/widgets/custom_app_bar.dart';
 import 'package:yum_quick/core/widgets/custom_button.dart';
 import 'package:yum_quick/core/widgets/custom_text_form_field.dart';
@@ -68,8 +69,9 @@ class SignUpViewBody extends StatelessWidget {
                     const SizedBox(height: 11),
                     CustomText(text: 'Date of birth'),
                     CustomTextFormField(
-                      keyboardType: TextInputType.text,
-                      hintText: 'DD / MM /YYY',
+                      keyboardType: TextInputType.number,
+                      hintText: 'DD / MM /YYYY',
+                      inputFormatters: [DateInputFormatter()],
                     ),
                     const SizedBox(height: 20),
                     TermsAndConditions(),
