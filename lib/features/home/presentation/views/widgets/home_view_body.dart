@@ -5,7 +5,7 @@ import 'package:yum_quick/core/widgets/custom_divider.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/best_seller_section.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/category_list.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/custom_home_app_bar.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/offer_card.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/offer_section.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
@@ -48,7 +48,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                     CustomDivider(),
                     BestSellerSection(),
                     SizedBox(height: 20),
-                    OfferCard(),
+                    OfferSection(),
                   ],
                 ),
               ),
