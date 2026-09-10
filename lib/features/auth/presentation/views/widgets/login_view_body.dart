@@ -41,55 +41,58 @@ class LoginViewBody extends StatelessWidget {
                 left: kHorizontalPadding,
                 top: 34,
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Welcome', style: TextStyles.semiBold24),
-                  const SizedBox(height: 19),
-                  Text(
-                    'Log in to your account to keep ordering your favorite meals from all the restaurants you love.',
-                    style: TextStyles.light14,
-                  ),
-                  const SizedBox(height: 40),
-                  CustomText(text: 'Email or Mobile Number'),
-                  CustomTextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    hintText: 'example@example.com',
-                  ),
-                  const SizedBox(height: 22),
-                  CustomText(text: 'Password '),
-                  PasswordField(),
-                  SizedBox(height: 14),
-                  ForgetPassword(onTap: () {}),
-                  const SizedBox(height: 40),
-                  Center(
-                    child: CustomButton(title: 'Log In', onPressed: () {}),
-                  ),
-                  const SizedBox(height: 29),
-                  Center(
-                    child: Text('or sign up with', style: TextStyles.light14),
-                  ),
-                  const SizedBox(height: 7),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    spacing: 10,
-                    children: [
-                      SocialButton(image: Assets.imagesGoogle),
-                      SocialButton(image: Assets.imagesFacebook),
-                      SocialButton(image: Assets.imagesFingerprint),
-                    ],
-                  ),
-                  SizedBox(height: 30),
-                  Center(
-                    child: PromptText(
-                      onTap: () {
-                        context.push(AppRouter.kSignUpViewView);
-                      },
-                      text1: "Don't have an account? ",
-                      text2: 'Sign Up',
+              child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Welcome', style: TextStyles.semiBold24),
+                    const SizedBox(height: 19),
+                    Text(
+                      'Log in to your account to keep ordering your favorite meals from all the restaurants you love.',
+                      style: TextStyles.light14,
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 40),
+                    CustomText(text: 'Email or Mobile Number'),
+                    CustomTextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                      hintText: 'example@example.com',
+                    ),
+                    const SizedBox(height: 22),
+                    CustomText(text: 'Password '),
+                    PasswordField(),
+                    SizedBox(height: 14),
+                    ForgetPassword(onTap: () {}),
+                    const SizedBox(height: 40),
+                    Center(
+                      child: CustomButton(title: 'Log In', onPressed: () {}),
+                    ),
+                    const SizedBox(height: 29),
+                    Center(
+                      child: Text('or sign up with', style: TextStyles.light14),
+                    ),
+                    const SizedBox(height: 7),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      spacing: 10,
+                      children: [
+                        SocialButton(image: Assets.imagesGoogle),
+                        SocialButton(image: Assets.imagesFacebook),
+                        SocialButton(image: Assets.imagesFingerprint),
+                      ],
+                    ),
+                    SizedBox(height: 30),
+                    Center(
+                      child: PromptText(
+                        onTap: () {
+                          context.push(AppRouter.kSignUpViewView);
+                        },
+                        text1: "Don't have an account? ",
+                        text2: 'Sign Up',
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

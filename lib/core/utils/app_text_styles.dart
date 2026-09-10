@@ -40,6 +40,20 @@ class TextStyles {
     color: const Color(0xFF252525),
   );
 
+  static TextStyle light12 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w300,
+    fontSize: 12,
+    height: 1,
+    color: const Color(0xFF252525),
+  );
+
+  static TextStyle medium12 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w500,
+    fontSize: 12,
+    height: 1,
+    color: AppColors.orangeBase,
+  );
+
   static TextStyle bold17 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.bold,
     fontSize: 17,
