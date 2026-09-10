@@ -27,7 +27,16 @@ class FirestoreService implements DatabaseService {
       final doc = await _firestore.collection(path).doc(documentId).get();
       return doc.data();
     }
-    final result = await _firestore.collection(path).get();
+
+    Query<Map<String, dynamic>> ref = _firestore.collection(path);
+    final where = query?['where'] as List<Map<String, dynamic>>?;
+    if (where != null) {
+      for (final condition in where) {
+        ref = ref.where(condition['field'], isEqualTo: condition['isEqualTo']);
+      }
+    }
+
+    final result = await ref.get();
     return result.docs.map((doc) => doc.data()).toList();
   }
 

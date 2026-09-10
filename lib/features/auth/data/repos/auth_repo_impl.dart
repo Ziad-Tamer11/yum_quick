@@ -60,10 +60,31 @@ class AuthRepoImpl implements AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> login({
-    required String email,
+    required String emailOrPhone,
     required String password,
   }) async {
     try {
+      var email = emailOrPhone;
+
+      final isEmail = emailOrPhone.contains('@');
+      if (!isEmail) {
+        final users =
+            await databaseService.getData(
+                  path: BackendEndpoint.getUserData,
+                  query: {
+                    'where': [
+                      {'field': 'phone', 'isEqualTo': emailOrPhone},
+                    ],
+                  },
+                )
+                as List;
+
+        if (users.isEmpty) {
+          return const Left(CustomException('Incorrect email or password.'));
+        }
+        email = users.first['email'];
+      }
+
       final firebaseUser = await firebaseAuthService.login(
         email: email,
         password: password,
