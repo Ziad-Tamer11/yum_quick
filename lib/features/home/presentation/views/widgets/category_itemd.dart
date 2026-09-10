@@ -14,6 +14,7 @@ class CategoryItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Column(
+        spacing: 4,
         children: [
           Container(
             width: itemWidth,

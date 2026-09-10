@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/widgets/custom_body_container.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/category_itemd.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/category_list.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 
 class HomeViewBody extends StatefulWidget {
@@ -37,7 +37,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 right: kHorizontalPadding,
                 top: 31,
               ),
-              child: Column(children: [CategoryItem()]),
+              child: Column(children: [CategoryList()]),
             ),
           ),
         ),
