@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240177305801",
+    "project_id": "ziad-e5a5d",
+    "storage_bucket": "ziad-e5a5d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240177305801:android:634e0b78b5bc2d5c3b5518",
+        "android_client_info": {
+          "package_name": "com.example.yum_quick"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRxy2goS4N-I1Kcl98X-tLP9SzWLA2Yyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

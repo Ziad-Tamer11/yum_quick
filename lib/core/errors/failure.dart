@@ -1,8 +1,12 @@
 abstract class Failure {
-  final String message;
-  const Failure(this.message);
+  final String errMessage;
+  const Failure(this.errMessage);
 }
 
 class ServerFailure extends Failure {
-  const ServerFailure(super.message);
+  const ServerFailure(super.errMessage);
+}
+
+class CustomException extends Failure {
+  const CustomException(super.errMessage);
 }
