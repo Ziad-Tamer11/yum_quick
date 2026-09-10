@@ -54,6 +54,13 @@ class TextStyles {
     color: AppColors.orangeBase,
   );
 
+  static TextStyle medium13 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w500,
+    fontSize: 13,
+    height: 0.5,
+    color: AppColors.orangeBase,
+  );
+
   static TextStyle bold17 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.bold,
     fontSize: 17,
@@ -90,5 +97,11 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     fontSize: 20,
     color: AppColors.primaryFont,
+  );
+
+  static TextStyle bold30 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w700,
+    fontSize: 30,
+    color: AppColors.secondaryFont,
   );
 }

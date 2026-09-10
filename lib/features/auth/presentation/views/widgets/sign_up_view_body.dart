@@ -7,6 +7,7 @@ import 'package:yum_quick/core/utils/app_router.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
 import 'package:yum_quick/core/utils/date_input_formatter.dart';
 import 'package:yum_quick/core/widgets/custom_app_bar.dart';
+import 'package:yum_quick/core/widgets/custom_body_container.dart';
 import 'package:yum_quick/core/widgets/custom_button.dart';
 import 'package:yum_quick/core/widgets/custom_text_form_field.dart';
 import 'package:yum_quick/core/widgets/password_filed.dart';
@@ -41,17 +42,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
           const CustomAppBar(title: 'New Account'),
           const SizedBox(height: 59),
           Expanded(
-            child: Container(
-              width: double.infinity,
-              decoration: ShapeDecoration(
-                color: const Color(0xFFF5F5F5),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
-                  ),
-                ),
-              ),
+            child: CustomBodyContainer(
               child: Padding(
                 padding: const EdgeInsets.only(
                   right: kHorizontalPadding,
