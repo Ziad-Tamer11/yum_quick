@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
+import 'package:yum_quick/core/utils/app_router.dart';
 import 'package:yum_quick/core/widgets/show_message_bar.dart';
 import 'package:yum_quick/features/auth/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:yum_quick/features/auth/presentation/views/widgets/login_view_body.dart';
@@ -15,6 +17,7 @@ class LoginViewBodyBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         if (state is LoginSuccess) {
           showMessageBar(context, 'Login Success', const Color(0xFF4CAF50));
+          context.push(AppRouter.kHomeViewView);
         }
         if (state is LoginFailure) {
           showMessageBar(context, state.errMessage, AppColors.red);
