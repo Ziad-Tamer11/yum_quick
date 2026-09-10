@@ -153,7 +153,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
       showMessageBar(
         context,
         'Please enter a valid date of birth.',
-        Colors.red,
+        const Color(0xFFF44336),
       );
       return;
     }

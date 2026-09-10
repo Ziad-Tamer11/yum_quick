@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
@@ -8,96 +9,132 @@ import 'package:yum_quick/core/widgets/custom_app_bar.dart';
 import 'package:yum_quick/core/widgets/custom_button.dart';
 import 'package:yum_quick/core/widgets/custom_text_form_field.dart';
 import 'package:yum_quick/core/widgets/password_filed.dart';
+import 'package:yum_quick/features/auth/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:yum_quick/features/auth/presentation/views/widgets/custom_text.dart';
 import 'package:yum_quick/features/auth/presentation/views/widgets/forget_password.dart';
 import 'package:yum_quick/features/auth/presentation/views/widgets/prompt_text.dart';
 import 'package:yum_quick/features/auth/presentation/views/widgets/social_button.dart';
 
-class LoginViewBody extends StatelessWidget {
+class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});
 
   @override
+  State<LoginViewBody> createState() => _LoginViewBodyState();
+}
+
+class _LoginViewBodyState extends State<LoginViewBody> {
+  final _formKey = GlobalKey<FormState>();
+  var autovalidateMode = AutovalidateMode.disabled;
+  late String emailOrPhone, password;
+
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: MediaQuery.of(context).size.height * .055),
-        const CustomAppBar(title: 'Log In'),
-        const SizedBox(height: 59),
-        Expanded(
-          child: Container(
-            width: double.infinity,
-            decoration: ShapeDecoration(
-              color: const Color(0xFFF5F5F5),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30),
-                  topRight: Radius.circular(30),
+    return Form(
+      key: _formKey,
+      autovalidateMode: autovalidateMode,
+      child: Column(
+        children: [
+          SizedBox(height: MediaQuery.of(context).size.height * .055),
+          const CustomAppBar(title: 'Log In'),
+          const SizedBox(height: 59),
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              decoration: ShapeDecoration(
+                color: const Color(0xFFF5F5F5),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
                 ),
               ),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(
-                right: kHorizontalPadding,
-                left: kHorizontalPadding,
-                top: 34,
-              ),
-              child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Welcome', style: TextStyles.semiBold24),
-                    const SizedBox(height: 19),
-                    Text(
-                      'Log in to your account to keep ordering your favorite meals from all the restaurants you love.',
-                      style: TextStyles.light14,
-                    ),
-                    const SizedBox(height: 40),
-                    CustomText(text: 'Email or Mobile Number'),
-                    CustomTextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      hintText: 'example@example.com',
-                    ),
-                    const SizedBox(height: 22),
-                    CustomText(text: 'Password '),
-                    PasswordField(),
-                    SizedBox(height: 14),
-                    ForgetPassword(onTap: () {}),
-                    const SizedBox(height: 40),
-                    Center(
-                      child: CustomButton(title: 'Log In', onPressed: () {}),
-                    ),
-                    const SizedBox(height: 29),
-                    Center(
-                      child: Text('or sign up with', style: TextStyles.light14),
-                    ),
-                    const SizedBox(height: 7),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      spacing: 10,
-                      children: [
-                        SocialButton(image: Assets.imagesGoogle),
-                        SocialButton(image: Assets.imagesFacebook),
-                        SocialButton(image: Assets.imagesFingerprint),
-                      ],
-                    ),
-                    SizedBox(height: 30),
-                    Center(
-                      child: PromptText(
-                        onTap: () {
-                          context.pushReplacement(AppRouter.kSignUpViewView);
-                        },
-                        text1: "Don't have an account? ",
-                        text2: 'Sign Up',
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  right: kHorizontalPadding,
+                  left: kHorizontalPadding,
+                  top: 34,
+                ),
+                child: SingleChildScrollView(
+                  physics: BouncingScrollPhysics(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Welcome', style: TextStyles.semiBold24),
+                      const SizedBox(height: 19),
+                      Text(
+                        'Log in to your account to keep ordering your favorite meals from all the restaurants you love.',
+                        style: TextStyles.light14,
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 40),
+                      CustomText(text: 'Email or Mobile Number'),
+                      CustomTextFormField(
+                        keyboardType: TextInputType.emailAddress,
+                        hintText: 'example@example.com',
+                        onSaved: (value) => emailOrPhone = value!,
+                      ),
+                      const SizedBox(height: 22),
+                      CustomText(text: 'Password '),
+                      PasswordField(onSaved: (value) => password = value!),
+                      SizedBox(height: 14),
+                      ForgetPassword(onTap: () {}),
+                      const SizedBox(height: 40),
+                      Center(
+                        child: CustomButton(
+                          title: 'Log In',
+                          onPressed: () {
+                            _login(context);
+                          },
+                        ),
+                      ),
+                      const SizedBox(height: 29),
+                      Center(
+                        child: Text(
+                          'or sign up with',
+                          style: TextStyles.light14,
+                        ),
+                      ),
+                      const SizedBox(height: 7),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        spacing: 10,
+                        children: [
+                          SocialButton(image: Assets.imagesGoogle),
+                          SocialButton(image: Assets.imagesFacebook),
+                          SocialButton(image: Assets.imagesFingerprint),
+                        ],
+                      ),
+                      SizedBox(height: 30),
+                      Center(
+                        child: PromptText(
+                          onTap: () {
+                            context.pushReplacement(AppRouter.kSignUpViewView);
+                          },
+                          text1: "Don't have an account? ",
+                          text2: 'Sign Up',
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
+    );
+  }
+
+  void _login(BuildContext context) {
+    if (!_formKey.currentState!.validate()) {
+      setState(() => autovalidateMode = AutovalidateMode.always);
+      return;
+    }
+    _formKey.currentState!.save();
+
+    context.read<LoginCubit>().login(
+      emailOrPhone: emailOrPhone,
+      password: password,
     );
   }
 }

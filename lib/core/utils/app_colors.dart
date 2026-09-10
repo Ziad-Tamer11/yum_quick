@@ -8,5 +8,6 @@ class AppColors {
   static const Color primaryFont = Color(0xff391713);
   static const Color secondaryFont = Color(0xffF8F8F8);
   static const Color white = Color(0xffFFFFFF);
-  static const Color red = Color(0xFFED5E5E);
+  static const Color red = Color(0xFFF44336);
+  static const Color green = Color(0xFF4CAF50);
 }

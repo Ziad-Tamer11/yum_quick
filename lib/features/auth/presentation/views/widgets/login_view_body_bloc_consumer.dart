@@ -14,7 +14,7 @@ class LoginViewBodyBlocConsumer extends StatelessWidget {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         if (state is LoginSuccess) {
-          showMessageBar(context, 'Login Success', Colors.green);
+          showMessageBar(context, 'Login Success', const Color(0xFF4CAF50));
         }
         if (state is LoginFailure) {
           showMessageBar(context, state.errMessage, AppColors.red);
