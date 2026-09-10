@@ -34,7 +34,7 @@ class CustomTextFormField extends StatelessWidget {
       enabled: enabled, // ← جديد
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return 'Enter text here';
+          return 'Fill the Field';
         }
         return null;
       },
@@ -52,7 +52,10 @@ class CustomTextFormField extends StatelessWidget {
           height: 0.70,
           color: AppColors.primaryFont.withValues(alpha: 0.7),
         ),
-        errorStyle: TextStyles.regular20.copyWith(color: AppColors.red),
+        errorStyle: TextStyles.regular20.copyWith(
+          color: AppColors.red,
+          fontSize: 18,
+        ),
         suffixIcon: suffixIcon,
         border: buildBorder(),
         enabledBorder: buildBorder(),
