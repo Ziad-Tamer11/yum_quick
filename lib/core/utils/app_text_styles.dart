@@ -47,6 +47,12 @@ class TextStyles {
     color: const Color(0xFF252525),
   );
 
+  static TextStyle semiBold12 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w600,
+    fontSize: 12,
+    color: AppColors.orangeBase,
+  );
+
   static TextStyle medium12 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w500,
     fontSize: 12,

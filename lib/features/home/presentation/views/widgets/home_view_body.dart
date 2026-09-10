@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/widgets/custom_body_container.dart';
 import 'package:yum_quick/core/widgets/custom_divider.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/best_seller.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/category_list.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 
@@ -38,7 +39,9 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 right: kHorizontalPadding,
                 top: 31,
               ),
-              child: Column(children: [CategoryList(), CustomDivider()]),
+              child: Column(
+                children: [CategoryList(), CustomDivider(), BestSeller()],
+              ),
             ),
           ),
         ),
