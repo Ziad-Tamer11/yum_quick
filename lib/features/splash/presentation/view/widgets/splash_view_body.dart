@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
@@ -44,6 +45,12 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   void executeNavigation() {
     Future.delayed(const Duration(milliseconds: 2200), () {
       if (!mounted) return;
+
+      if (FirebaseAuth.instance.currentUser != null) {
+        context.go(AppRouter.kHomeViewView);
+        return;
+      }
+
       final hasSeenOnboarding = Prefs.getBool(kIsOnboardingSeen);
       if (hasSeenOnboarding) {
         context.pushReplacement(AppRouter.kWelcomeSplashView);

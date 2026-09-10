@@ -17,7 +17,7 @@ class SignUpViewBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         if (state is SignUpSuccess) {
           showMessageBar(context, 'Account Created Successfully', Colors.green);
-          context.push(AppRouter.kHomeViewView);
+          context.go(AppRouter.kHomeViewView);
         }
         if (state is SignUpFailure) {
           showMessageBar(context, state.errMessage, AppColors.red);
