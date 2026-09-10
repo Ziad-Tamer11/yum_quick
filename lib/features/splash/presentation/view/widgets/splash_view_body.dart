@@ -46,7 +46,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       if (!mounted) return;
       final hasSeenOnboarding = Prefs.getBool(kIsOnboardingSeen);
       if (hasSeenOnboarding) {
-        context.pushReplacement(AppRouter.kLoginViewView);
+        context.pushReplacement(AppRouter.kWelcomeSplashView);
       } else {
         context.pushReplacement(AppRouter.kOnboardingView);
       }

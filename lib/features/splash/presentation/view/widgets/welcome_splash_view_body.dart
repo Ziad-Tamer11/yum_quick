@@ -31,7 +31,7 @@ class WelcomeSplashViewBody extends StatelessWidget {
           title: 'Log In',
           titleColor: AppColors.orangeBase,
           onPressed: () {
-            context.pushReplacement(AppRouter.kLoginViewView);
+            context.push(AppRouter.kLoginViewView);
           },
           backgroundColor: AppColors.yellowBase,
         ),
@@ -40,7 +40,7 @@ class WelcomeSplashViewBody extends StatelessWidget {
           title: 'Sign Up',
           titleColor: AppColors.orangeBase,
           onPressed: () {
-            context.pushReplacement(AppRouter.kSignUpViewView);
+            context.push(AppRouter.kSignUpViewView);
           },
           backgroundColor: AppColors.yellowLight,
         ),
