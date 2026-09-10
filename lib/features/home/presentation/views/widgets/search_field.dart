@@ -16,60 +16,67 @@ class SearchFiled extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: searchController,
-      onChanged: onChanged,
-      decoration: InputDecoration(
-        isDense: true,
-        hintText: 'Search',
-        hintStyle: TextStyles.light12.copyWith(
-          color: const Color(0xFF676767),
-          fontSize: 16,
-        ),
-        suffixIconConstraints: const BoxConstraints(
-          minWidth: 40,
-          minHeight: 40,
-        ),
-        suffixIcon: ValueListenableBuilder<TextEditingValue>(
-          valueListenable: searchController,
-          builder: (context, value, _) {
-            if (value.text.isEmpty) {
-              return Container(
-                margin: const EdgeInsets.only(right: 4),
-                width: 32,
-                height: 32,
-                decoration: const ShapeDecoration(
-                  color: AppColors.orangeBase,
-                  shape: CircleBorder(),
-                ),
-                child: Center(
-                  child: IconButton(
-                    onPressed: () {
-                      // TODO: Navigate to Filter View
-                    },
-                    icon: SvgPicture.asset(
-                      Assets.imagesFilter,
-                      width: 13,
-                      height: 13,
+    return SizedBox(
+      height: 38,
+      child: TextField(
+        controller: searchController,
+        onChanged: onChanged,
+        decoration: InputDecoration(
+          isDense: true,
+          hintText: 'Search',
+          hintStyle: TextStyles.light12.copyWith(
+            color: const Color(0xFF676767),
+            fontSize: 16,
+          ),
+          suffixIconConstraints: const BoxConstraints(
+            minWidth: 36,
+            minHeight: 36,
+          ),
+          suffixIcon: ValueListenableBuilder<TextEditingValue>(
+            valueListenable: searchController,
+            builder: (context, value, _) {
+              if (value.text.isEmpty) {
+                return Container(
+                  margin: const EdgeInsets.only(right: 4),
+                  width: 30,
+                  height: 30,
+                  decoration: const ShapeDecoration(
+                    color: AppColors.orangeBase,
+                    shape: CircleBorder(),
+                  ),
+                  child: Center(
+                    child: IconButton(
+                      onPressed: () {
+                        // TODO: Navigate to Filter View
+                      },
+                      icon: SvgPicture.asset(
+                        Assets.imagesFilter,
+                        width: 20,
+                        height: 13,
+                      ),
                     ),
                   ),
+                );
+              }
+              return IconButton(
+                onPressed: () {
+                  searchController.clear();
+                  onChanged?.call('');
+                },
+                icon: const Icon(
+                  Icons.close,
+                  size: 20,
+                  color: AppColors.orangeBase,
                 ),
               );
-            }
-            return IconButton(
-              onPressed: () {
-                searchController.clear();
-                onChanged?.call('');
-              },
-              icon: const Icon(Icons.close, color: AppColors.orangeBase),
-            );
-          },
+            },
+          ),
+          fillColor: Colors.white,
+          filled: true,
+          border: _buildOutlineInputBorder(),
+          enabledBorder: _buildOutlineInputBorder(),
+          focusedBorder: _buildOutlineInputBorder(),
         ),
-        fillColor: Colors.white,
-        filled: true,
-        border: _buildOutlineInputBorder(),
-        enabledBorder: _buildOutlineInputBorder(),
-        focusedBorder: _buildOutlineInputBorder(),
       ),
     );
   }
