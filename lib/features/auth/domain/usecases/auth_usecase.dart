@@ -30,4 +30,8 @@ class AuthUseCase {
       dateOfBirth: dateOfBirth,
     );
   }
+
+  Future<Either<Failure, void>> logout() {
+    return authRepo.logout();
+  }
 }

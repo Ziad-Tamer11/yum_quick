@@ -15,4 +15,6 @@ abstract class AuthRepo {
     required String phone,
     required DateTime dateOfBirth,
   });
+
+  Future<Either<Failure, void>> logout();
 }
