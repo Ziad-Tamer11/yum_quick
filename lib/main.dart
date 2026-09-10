@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:yum_quick/core/di/service_locator.dart';
 import 'package:yum_quick/core/services/custom_bloc_observer.dart';
 import 'package:yum_quick/core/services/shared_preferences_singleton.dart';
+import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_router.dart';
 import 'package:yum_quick/firebase_options.dart';
 
@@ -25,7 +26,10 @@ class YumQuick extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(textTheme: GoogleFonts.leagueSpartanTextTheme()),
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.yellowBase,
+        textTheme: GoogleFonts.leagueSpartanTextTheme(),
+      ),
       routerConfig: AppRouter.router,
     );
   }

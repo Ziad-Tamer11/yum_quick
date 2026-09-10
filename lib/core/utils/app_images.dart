@@ -6,9 +6,17 @@ class Assets {
   /// assets/images/back_icon_arrow.svg
   static const String imagesBackIconArrow = "assets/images/back_icon_arrow.svg";
 
+  /// Assets for imagesCart
+  /// assets/images/cart.svg
+  static const String imagesCart = "assets/images/cart.svg";
+
   /// Assets for imagesFacebook
   /// assets/images/facebook.svg
   static const String imagesFacebook = "assets/images/facebook.svg";
+
+  /// Assets for imagesFilter
+  /// assets/images/filter.svg
+  static const String imagesFilter = "assets/images/filter.svg";
 
   /// Assets for imagesFingerprint
   /// assets/images/fingerprint.svg
@@ -42,6 +50,10 @@ class Assets {
   /// assets/images/next_icon_arrow.svg
   static const String imagesNextIconArrow = "assets/images/next_icon_arrow.svg";
 
+  /// Assets for imagesNotification
+  /// assets/images/notification.svg
+  static const String imagesNotification = "assets/images/notification.svg";
+
   /// Assets for imagesOnboarding1
   /// assets/images/onboarding_1.png
   static const String imagesOnboarding1 = "assets/images/onboarding_1.png";
@@ -53,6 +65,10 @@ class Assets {
   /// Assets for imagesOnboarding3
   /// assets/images/onboarding_3.png
   static const String imagesOnboarding3 = "assets/images/onboarding_3.png";
+
+  /// Assets for imagesProfile
+  /// assets/images/profile.svg
+  static const String imagesProfile = "assets/images/profile.svg";
 
   /// Assets for imagesVisibilityOff
   /// assets/images/visibility_off.svg

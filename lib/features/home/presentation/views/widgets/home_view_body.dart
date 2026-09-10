@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+import 'package:yum_quick/constants.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/search_field.dart';
+
+class HomeViewBody extends StatefulWidget {
+  const HomeViewBody({super.key});
+
+  @override
+  State<HomeViewBody> createState() => _HomeViewBodyState();
+}
+
+class _HomeViewBodyState extends State<HomeViewBody> {
+  final _searchController = TextEditingController();
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Expanded(child: SearchFiled(searchController: _searchController)),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
