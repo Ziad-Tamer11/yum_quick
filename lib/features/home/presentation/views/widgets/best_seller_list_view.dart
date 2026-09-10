@@ -12,6 +12,7 @@ class BestSellerListView extends StatelessWidget {
     return SizedBox(
       height: itemHeight,
       child: ListView.separated(
+        physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: 6,
         separatorBuilder: (context, index) {

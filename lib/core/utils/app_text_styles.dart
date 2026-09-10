@@ -116,4 +116,16 @@ class TextStyles {
     fontSize: 30,
     color: AppColors.secondaryFont,
   );
+
+  static TextStyle regular16 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w400,
+    fontSize: 16,
+    color: AppColors.secondaryFont,
+  );
+
+  static TextStyle bold32 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w700,
+    fontSize: 32,
+    color: AppColors.secondaryFont,
+  );
 }
