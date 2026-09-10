@@ -16,16 +16,23 @@ class CategoryItem extends StatelessWidget {
       child: Column(
         spacing: 4,
         children: [
-          Container(
+          SizedBox(
             width: itemWidth,
-            height: itemWidth * 1.265,
-            decoration: ShapeDecoration(
-              color: AppColors.yellowLight,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
+            child: AspectRatio(
+              aspectRatio: 49 / 62,
+              child: Container(
+                decoration: ShapeDecoration(
+                  color: AppColors.yellowLight,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+                child: SvgPicture.asset(
+                  Assets.imagesSnacks,
+                  fit: BoxFit.scaleDown,
+                ),
               ),
             ),
-            child: SvgPicture.asset(Assets.imagesSnacks, fit: BoxFit.scaleDown),
           ),
           Text(
             'Snacks',
