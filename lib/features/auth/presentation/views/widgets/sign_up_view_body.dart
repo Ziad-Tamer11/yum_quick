@@ -95,7 +95,7 @@ class SignUpViewBody extends StatelessWidget {
                     Center(
                       child: PromptText(
                         onTap: () {
-                          context.push(AppRouter.kLoginViewView);
+                          context.pop(AppRouter.kLoginViewView);
                         },
                         text1: "Already have an account? ",
                         text2: 'Log in',

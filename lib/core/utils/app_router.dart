@@ -12,12 +12,31 @@ class AppRouter {
   static const kLoginViewView = '/loginViewView';
   static const kSignUpViewView = '/signUpViewView';
 
+  static CustomTransitionPage _slideFadePage(LocalKey key, Widget child) {
+    return CustomTransitionPage(
+      key: key,
+      child: child,
+      transitionDuration: const Duration(milliseconds: 400),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        final slide = Tween<Offset>(
+          begin: const Offset(0.08, 0),
+          end: Offset.zero,
+        ).animate(CurvedAnimation(parent: animation, curve: Curves.easeOutCubic));
+        return FadeTransition(
+          opacity: animation,
+          child: SlideTransition(position: slide, child: child),
+        );
+      },
+    );
+  }
+
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const SplashView()),
       GoRoute(
         path: kWelcomeSplashView,
-        builder: (context, state) => const WelcomeSplashView(),
+        pageBuilder: (context, state) =>
+            _slideFadePage(state.pageKey, const WelcomeSplashView()),
       ),
       GoRoute(
         path: kOnboardingView,
@@ -32,11 +51,13 @@ class AppRouter {
       ),
       GoRoute(
         path: kLoginViewView,
-        builder: (context, state) => const LoginView(),
+        pageBuilder: (context, state) =>
+            _slideFadePage(state.pageKey, const LoginView()),
       ),
       GoRoute(
         path: kSignUpViewView,
-        builder: (context, state) => const SignUpView(),
+        pageBuilder: (context, state) =>
+            _slideFadePage(state.pageKey, const SignUpView()),
       ),
     ],
   );
