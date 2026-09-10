@@ -85,7 +85,7 @@ class LoginViewBody extends StatelessWidget {
                     Center(
                       child: PromptText(
                         onTap: () {
-                          context.push(AppRouter.kSignUpViewView);
+                          context.pushReplacement(AppRouter.kSignUpViewView);
                         },
                         text1: "Don't have an account? ",
                         text2: 'Sign Up',
