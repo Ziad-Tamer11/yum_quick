@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
-import 'package:yum_quick/core/utils/app_text_styles.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/price_widget.dart';
 
 class BestSellerItem extends StatelessWidget {
   const BestSellerItem({super.key});
@@ -24,36 +23,7 @@ class BestSellerItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(19.12),
             ),
           ),
-          child: Stack(
-            children: [
-              Positioned(
-                bottom: 13,
-                right: 0,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 2,
-                  ),
-                  decoration: ShapeDecoration(
-                    color: AppColors.orangeBase,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        bottomLeft: Radius.circular(30),
-                      ),
-                    ),
-                  ),
-                  child: Text(
-                    '\$103.01',
-                    textAlign: TextAlign.center,
-                    style: TextStyles.regular12.copyWith(
-                      color: AppColors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          child: PriceWidget(),
         ),
       ),
     );

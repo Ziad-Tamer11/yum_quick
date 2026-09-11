@@ -99,8 +99,8 @@ class Assets {
   static const String imagesProfile = "assets/images/profile.svg";
 
   /// Assets for imagesRecommend
-  /// assets/images/recommend.svg
-  static const String imagesRecommend = "assets/images/recommend.svg";
+  /// assets/images/recommend.png
+  static const String imagesRecommend = "assets/images/recommend.png";
 
   /// Assets for imagesSnacks
   /// assets/images/snacks.svg
