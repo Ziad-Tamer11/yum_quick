@@ -17,8 +17,6 @@ class _RecommendItemState extends State<RecommendItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 159,
-      height: 140,
       decoration: ShapeDecoration(
         image: DecorationImage(
           image: AssetImage(Assets.imagesRecommend),
