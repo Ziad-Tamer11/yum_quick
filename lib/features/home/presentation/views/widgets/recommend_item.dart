@@ -93,7 +93,10 @@ class _RecommendItemState extends State<RecommendItem> {
                 child: Center(
                   child: SvgPicture.asset(
                     Assets.imagesCart,
-                    color: AppColors.secondaryFont,
+                    colorFilter: const ColorFilter.mode(
+                      AppColors.secondaryFont,
+                      BlendMode.srcIn,
+                    ),
                   ),
                 ),
               ),
