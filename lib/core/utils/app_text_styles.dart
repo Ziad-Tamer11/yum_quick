@@ -99,6 +99,12 @@ class TextStyles {
     color: AppColors.primaryFont,
   );
 
+  static TextStyle medium16 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+    color: AppColors.primaryFont,
+  );
+
   static TextStyle regular20 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w400,
     fontSize: 20,
