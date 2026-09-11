@@ -1,10 +1,9 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/services/shared_preferences_singleton.dart';
-import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_router.dart';
+import 'package:yum_quick/core/widgets/custom_dots_indicator.dart';
 import 'package:yum_quick/core/widgets/custom_text_button.dart';
 import 'package:yum_quick/features/onboarding/presentation/views/widgets/onboarding_page_view.dart';
 
@@ -47,22 +46,9 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
                   return Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      DotsIndicator(
+                      CustomDotsIndicator(
+                        pageController: pageController,
                         dotsCount: 3,
-                        position: currentPage.toDouble(),
-                        decorator: DotsDecorator(
-                          color: AppColors.yellowLight,
-                          activeColor: AppColors.orangeBase,
-                          size: const Size(20, 4),
-                          activeSize: const Size(20, 4),
-                          spacing: const EdgeInsets.symmetric(horizontal: 4),
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(4)),
-                          ),
-                          activeShape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(4)),
-                          ),
-                        ),
                       ),
                       const SizedBox(height: 20),
                       CustomTextButton(
