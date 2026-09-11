@@ -30,6 +30,14 @@ class Assets {
   /// assets/images/favorite.svg
   static const String imagesFavorite = "assets/images/favorite.svg";
 
+  /// Assets for imagesFavoriteBnb
+  /// assets/images/favorite_bnb.svg
+  static const String imagesFavoriteBnb = "assets/images/favorite_bnb.svg";
+
+  /// Assets for imagesFavoriteBnbSelected
+  /// assets/images/favorite_bnb_selected.svg
+  static const String imagesFavoriteBnbSelected = "assets/images/favorite_bnb_selected.svg";
+
   /// Assets for imagesFilter
   /// assets/images/filter.svg
   static const String imagesFilter = "assets/images/filter.svg";
@@ -41,6 +49,14 @@ class Assets {
   /// Assets for imagesGoogle
   /// assets/images/google.svg
   static const String imagesGoogle = "assets/images/google.svg";
+
+  /// Assets for imagesHome
+  /// assets/images/home.svg
+  static const String imagesHome = "assets/images/home.svg";
+
+  /// Assets for imagesHomeSelected
+  /// assets/images/home_selected.svg
+  static const String imagesHomeSelected = "assets/images/home_selected.svg";
 
   /// Assets for imagesIcon1
   /// assets/images/icon_1.svg
@@ -65,6 +81,14 @@ class Assets {
   /// Assets for imagesMeals
   /// assets/images/meals.svg
   static const String imagesMeals = "assets/images/meals.svg";
+
+  /// Assets for imagesMenu
+  /// assets/images/menu.svg
+  static const String imagesMenu = "assets/images/menu.svg";
+
+  /// Assets for imagesMenuSelected
+  /// assets/images/menu__selected.svg
+  static const String imagesMenuSelected = "assets/images/menu__selected.svg";
 
   /// Assets for imagesNextIconArrow
   /// assets/images/next_icon_arrow.svg
@@ -102,6 +126,14 @@ class Assets {
   /// assets/images/onboarding_3.png
   static const String imagesOnboarding3 = "assets/images/onboarding_3.png";
 
+  /// Assets for imagesOrderSelected
+  /// assets/images/order__selected.svg
+  static const String imagesOrderSelected = "assets/images/order__selected.svg";
+
+  /// Assets for imagesOrders
+  /// assets/images/orders.svg
+  static const String imagesOrders = "assets/images/orders.svg";
+
   /// Assets for imagesProfile
   /// assets/images/profile.svg
   static const String imagesProfile = "assets/images/profile.svg";
@@ -117,6 +149,14 @@ class Assets {
   /// Assets for imagesSnacks
   /// assets/images/snacks.svg
   static const String imagesSnacks = "assets/images/snacks.svg";
+
+  /// Assets for imagesSupport
+  /// assets/images/support.svg
+  static const String imagesSupport = "assets/images/support.svg";
+
+  /// Assets for imagesSupportSelected
+  /// assets/images/support_selected.svg
+  static const String imagesSupportSelected = "assets/images/support_selected.svg";
 
   /// Assets for imagesVegan
   /// assets/images/vegan.svg

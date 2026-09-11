@@ -47,7 +47,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       if (!mounted) return;
 
       if (FirebaseAuth.instance.currentUser != null) {
-        context.go(AppRouter.kHomeViewView);
+        context.go(AppRouter.kMainViewView);
         return;
       }
 
