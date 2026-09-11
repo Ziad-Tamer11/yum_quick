@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/cart_item_action_buttons.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/favorite_widget.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/price_widget.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/rating_widget.dart';
@@ -68,6 +69,16 @@ class _RecommendItemState extends State<RecommendItem> {
           ),
         ),
         const SizedBox(height: 13),
+        Row(
+          children: [
+            Text(
+              '\$15.00',
+              style: TextStyles.medium20.copyWith(color: AppColors.orangeBase),
+            ),
+            const SizedBox(width: 9),
+            CartItemActionButtons(),
+          ],
+        ),
       ],
     );
   }
