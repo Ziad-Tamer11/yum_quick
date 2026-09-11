@@ -70,6 +70,10 @@ class Assets {
   /// assets/images/next_icon_arrow.svg
   static const String imagesNextIconArrow = "assets/images/next_icon_arrow.svg";
 
+  /// Assets for imagesNotFavorite
+  /// assets/images/not_favorite.svg
+  static const String imagesNotFavorite = "assets/images/not_favorite.svg";
+
   /// Assets for imagesNotification
   /// assets/images/notification.svg
   static const String imagesNotification = "assets/images/notification.svg";
