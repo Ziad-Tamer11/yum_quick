@@ -98,6 +98,10 @@ class Assets {
   /// assets/images/profile.svg
   static const String imagesProfile = "assets/images/profile.svg";
 
+  /// Assets for imagesRecommend
+  /// assets/images/recommend.svg
+  static const String imagesRecommend = "assets/images/recommend.svg";
+
   /// Assets for imagesSnacks
   /// assets/images/snacks.svg
   static const String imagesSnacks = "assets/images/snacks.svg";
