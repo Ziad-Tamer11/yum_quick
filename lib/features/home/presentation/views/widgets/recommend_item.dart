@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
@@ -77,6 +78,26 @@ class _RecommendItemState extends State<RecommendItem> {
             ),
             const SizedBox(width: 9),
             CartItemActionButtons(),
+            const SizedBox(width: 8),
+            Container(
+              width: 19,
+              height: 19,
+              decoration: ShapeDecoration(
+                color: AppColors.orangeBase,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              child: Padding(
+                padding: EdgeInsetsGeometry.all(3),
+                child: Center(
+                  child: SvgPicture.asset(
+                    Assets.imagesCart,
+                    color: AppColors.secondaryFont,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ],
