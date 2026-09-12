@@ -42,7 +42,7 @@ class CustomSideSheetAppBar extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 37),
           child: CustomDivider(color: AppColors.yellowBase),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 15),
       ],
     );
   }
