@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/widgets/custom_button.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/item_cart.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/item_cartsection.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/price_section.dart';
 
 class FilledCartViewBody extends StatelessWidget {
@@ -15,8 +15,8 @@ class FilledCartViewBody extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         child: Column(
           children: [
-            ItemCart(),
-            const SizedBox(height: 60),
+            ItemCartSection(),
+            const SizedBox(height: 40),
             PriceSection(),
             const SizedBox(height: 82),
             CustomButton(
