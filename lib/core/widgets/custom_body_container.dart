@@ -7,18 +7,20 @@ class CustomBodyContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      decoration: const ShapeDecoration(
-        color: Color(0xFFF5F5F5),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
+    return Expanded(
+      child: Container(
+        width: double.infinity,
+        decoration: const ShapeDecoration(
+          color: Color(0xFFF5F5F5),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            ),
           ),
         ),
+        child: child,
       ),
-      child: child,
     );
   }
 }

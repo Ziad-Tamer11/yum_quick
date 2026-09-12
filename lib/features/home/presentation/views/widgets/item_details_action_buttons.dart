@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/cart_item_action_button.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/item_details_action_button.dart';
 
-class CartItemActionButtons extends StatefulWidget {
-  const CartItemActionButtons({super.key});
+class ItemDetailsActionButtons extends StatefulWidget {
+  const ItemDetailsActionButtons({super.key});
 
   @override
-  State<CartItemActionButtons> createState() => _CartItemActionButtonsState();
+  State<ItemDetailsActionButtons> createState() =>
+      _ItemDetailsActionButtonsState();
 }
 
-class _CartItemActionButtonsState extends State<CartItemActionButtons> {
+class _ItemDetailsActionButtonsState extends State<ItemDetailsActionButtons> {
   static const _maxQuantity = 10;
 
   var quantity = 1;
@@ -18,9 +19,9 @@ class _CartItemActionButtonsState extends State<CartItemActionButtons> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      spacing: 5,
+      spacing: 15,
       children: [
-        CartItemActionButton(
+        ItemDetailsActionButton(
           icon: Icons.remove,
           color: quantity > 1 ? AppColors.orangeBase : AppColors.orangeLight,
           onTap: () {
@@ -30,9 +31,9 @@ class _CartItemActionButtonsState extends State<CartItemActionButtons> {
         Text(
           '$quantity',
           textAlign: TextAlign.center,
-          style: TextStyles.regular15,
+          style: TextStyles.regular24,
         ),
-        CartItemActionButton(
+        ItemDetailsActionButton(
           icon: Icons.add,
           color: quantity < _maxQuantity
               ? AppColors.orangeBase

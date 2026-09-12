@@ -25,6 +25,7 @@ class _CustomItemDetailsAppBarState extends State<CustomItemDetailsAppBar> {
         left: kHorizontalPadding,
         right: kHorizontalPadding,
         top: 41,
+        bottom: 13,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,

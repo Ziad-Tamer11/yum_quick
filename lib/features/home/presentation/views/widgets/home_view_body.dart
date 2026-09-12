@@ -33,27 +33,25 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           child: CustomHomeAppBar(searchController: _searchController),
         ),
         const SizedBox(height: 17),
-        const Expanded(
-          child: CustomBodyContainer(
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: kHorizontalPadding,
-                right: kHorizontalPadding,
-                top: 31,
-              ),
-              child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
-                child: Column(
-                  children: [
-                    CategoryList(),
-                    CustomDivider(),
-                    BestSellerSection(),
-                    SizedBox(height: 20),
-                    OfferSection(),
-                    SizedBox(height: 20),
-                    RecommendSection(),
-                  ],
-                ),
+        CustomBodyContainer(
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: kHorizontalPadding,
+              right: kHorizontalPadding,
+              top: 31,
+            ),
+            child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: Column(
+                children: [
+                  CategoryList(),
+                  CustomDivider(),
+                  BestSellerSection(),
+                  SizedBox(height: 20),
+                  OfferSection(),
+                  SizedBox(height: 20),
+                  RecommendSection(),
+                ],
               ),
             ),
           ),
