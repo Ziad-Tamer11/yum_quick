@@ -10,12 +10,14 @@ class ItemActionButton extends StatelessWidget {
     required this.width,
     required this.height,
     this.iconSize,
+    this.iconColor,
   });
   final IconData icon;
   final Color color;
   final VoidCallback onTap;
   final double width, height;
   final double? iconSize;
+  final Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,11 @@ class ItemActionButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
           ),
-          child: Icon((icon), size: iconSize, color: AppColors.secondaryFont),
+          child: Icon(
+            icon,
+            size: iconSize,
+            color: iconColor ?? AppColors.secondaryFont,
+          ),
         ),
       ),
     );

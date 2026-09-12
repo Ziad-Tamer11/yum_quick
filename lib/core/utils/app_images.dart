@@ -82,6 +82,10 @@ class Assets {
   /// assets/images/icon_3.svg
   static const String imagesIcon3 = "assets/images/icon_3.svg";
 
+  /// Assets for imagesItemCart
+  /// assets/images/item_cart.png
+  static const String imagesItemCart = "assets/images/item_cart.png";
+
   /// Assets for imagesItemDetails
   /// assets/images/item_details.png
   static const String imagesItemDetails = "assets/images/item_details.png";

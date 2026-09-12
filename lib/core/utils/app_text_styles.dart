@@ -125,6 +125,14 @@ class TextStyles {
     color: AppColors.primaryFont,
   );
 
+  static TextStyle medium15 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w500,
+    fontSize: 15,
+    color: AppColors.white,
+    height: 0.93,
+    letterSpacing: 0.45,
+  );
+
   static TextStyle regular20 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w400,
     fontSize: 20,
@@ -135,6 +143,12 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     fontSize: 12,
     color: AppColors.primaryFont,
+  );
+
+  static TextStyle regular13 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w400,
+    fontSize: 13,
+    color: AppColors.secondaryFont,
   );
 
   static TextStyle bold30 = GoogleFonts.leagueSpartan(
