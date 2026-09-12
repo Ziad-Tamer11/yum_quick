@@ -15,6 +15,9 @@ class PriceSection extends StatelessWidget {
         OrderSummary(title: 'Delivery', value: '3.00'),
         const SizedBox(height: 21),
         CustomDashedLine(color: AppColors.orangeLight),
+        const SizedBox(height: 19),
+        OrderSummary(title: 'Total', value: '35.00'),
+        const SizedBox(height: 82),
       ],
     );
   }
