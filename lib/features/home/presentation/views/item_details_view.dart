@@ -6,6 +6,8 @@ class ItemDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: ItemDetailsViewBody());
+    return const Scaffold(
+      body: SafeArea(bottom: false, child: ItemDetailsViewBody()),
+    );
   }
 }

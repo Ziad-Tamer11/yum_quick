@@ -13,19 +13,23 @@ class CartItemActionButton extends StatelessWidget {
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      customBorder: const CircleBorder(),
-      onTap: onTap,
-      child: Container(
-        width: 17,
-        height: 17,
-        decoration: ShapeDecoration(
-          color: color,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+    return Material(
+      color: Colors.white,
+      shape: const CircleBorder(),
+      child: InkWell(
+        customBorder: const CircleBorder(),
+        onTap: onTap,
+        child: Container(
+          width: 17,
+          height: 17,
+          decoration: ShapeDecoration(
+            color: color,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
           ),
+          child: Icon((icon), size: 16, color: AppColors.secondaryFont),
         ),
-        child: Icon((icon), size: 16, color: AppColors.secondaryFont),
       ),
     );
   }

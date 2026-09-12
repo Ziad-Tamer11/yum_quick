@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 
-class FavoriteWidget extends StatelessWidget {
-  const FavoriteWidget({
-    super.key,
-    required this.isFavorite,
-    required this.onTap,
-  });
+class FavoriteWidget extends StatefulWidget {
+  const FavoriteWidget({super.key});
 
-  final bool isFavorite;
-  final VoidCallback onTap;
+  @override
+  State<FavoriteWidget> createState() => _FavoriteWidgetState();
+}
+
+class _FavoriteWidgetState extends State<FavoriteWidget> {
+  var isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class FavoriteWidget extends StatelessWidget {
       shape: const CircleBorder(),
       child: InkWell(
         customBorder: const CircleBorder(),
-        onTap: onTap,
+        onTap: () => setState(() => isFavorite = !isFavorite),
         child: SizedBox(
           width: 22,
           height: 22,

@@ -10,15 +10,8 @@ import 'package:yum_quick/features/home/presentation/views/widgets/favorite_widg
 import 'package:yum_quick/features/home/presentation/views/widgets/price_widget.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/rating_widget.dart';
 
-class RecommendItem extends StatefulWidget {
+class RecommendItem extends StatelessWidget {
   const RecommendItem({super.key});
-
-  @override
-  State<RecommendItem> createState() => _RecommendItemState();
-}
-
-class _RecommendItemState extends State<RecommendItem> {
-  var isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -51,11 +44,11 @@ class _RecommendItemState extends State<RecommendItem> {
                       mainAxisSize: MainAxisSize.min,
                       spacing: 5,
                       children: [
-                        RatingWidget(),
-                        FavoriteWidget(
-                          isFavorite: isFavorite,
-                          onTap: () => setState(() => isFavorite = !isFavorite),
+                        RatingWidget(
+                          backgroundColor: Colors.white,
+                          textColor: AppColors.orangeBase,
                         ),
+                        FavoriteWidget(),
                       ],
                     ),
                   ),
