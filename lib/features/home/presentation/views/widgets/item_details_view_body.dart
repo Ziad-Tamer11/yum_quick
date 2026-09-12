@@ -26,6 +26,7 @@ class ItemDetailsViewBody extends StatelessWidget {
                 top: 24,
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     height: 224,
@@ -52,6 +53,18 @@ class ItemDetailsViewBody extends StatelessWidget {
                     ],
                   ),
                   CustomDivider(),
+                  const SizedBox(height: 18),
+                  Text(
+                    'Tortilla Chips With Toppins',
+                    style: TextStyles.regular16.copyWith(
+                      color: AppColors.primaryFont,
+                    ),
+                  ),
+                  const SizedBox(height: 7),
+                  Text(
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+                    style: TextStyles.light16,
+                  ),
                 ],
               ),
             ),

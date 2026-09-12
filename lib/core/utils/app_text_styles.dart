@@ -53,6 +53,14 @@ class TextStyles {
     color: const Color(0xFF252525),
   );
 
+  static TextStyle light16 = GoogleFonts.leagueSpartan(
+    fontWeight: FontWeight.w300,
+    fontSize: 16,
+    height: 0.95,
+    letterSpacing: -0.48,
+    color: AppColors.primaryFont,
+  );
+
   static TextStyle semiBold12 = GoogleFonts.leagueSpartan(
     fontWeight: FontWeight.w600,
     fontSize: 12,

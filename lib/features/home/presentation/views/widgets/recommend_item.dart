@@ -58,7 +58,10 @@ class RecommendItem extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 11),
-        Text('Bean and vegetable burger', style: TextStyles.medium16),
+        Text(
+          'Bean and vegetable burger',
+          style: TextStyles.medium16.copyWith(height: 0),
+        ),
         const SizedBox(height: 3),
         Text(
           overflow: TextOverflow.ellipsis,
