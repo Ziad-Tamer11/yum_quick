@@ -6,6 +6,7 @@ import 'package:yum_quick/core/utils/app_text_styles.dart';
 import 'package:yum_quick/core/widgets/custom_body_container.dart';
 import 'package:yum_quick/core/widgets/custom_divider.dart';
 import 'package:yum_quick/core/widgets/custom_item_details_app_bar.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/additional_item_section.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/item_details_action_buttons.dart';
 
 class ItemDetailsViewBody extends StatelessWidget {
@@ -65,6 +66,8 @@ class ItemDetailsViewBody extends StatelessWidget {
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
                     style: TextStyles.light16,
                   ),
+                  const SizedBox(height: 29),
+                  AdditionalItemSection(),
                 ],
               ),
             ),
