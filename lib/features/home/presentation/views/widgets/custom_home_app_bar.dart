@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
+import 'package:yum_quick/core/widgets/custom_side_sheet.dart';
 import 'package:yum_quick/features/home/presentation/views/cart_view.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/custom_options_button.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/search_field.dart';
@@ -23,7 +24,7 @@ class CustomHomeAppBar extends StatelessWidget {
             CustomOptionsButton(
               image: Assets.imagesCart,
               onTap: () {
-                CartView.show(context);
+                CustomSideSheet.show(context, child: const CartView());
               },
             ),
             const SizedBox(width: 7),
