@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:yum_quick/core/utils/app_colors.dart';
+import 'package:yum_quick/core/widgets/custom_button.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/item_cart.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/price_section.dart';
 
@@ -9,8 +11,23 @@ class FilledCartViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-      child: Column(
-        children: [ItemCart(), const SizedBox(height: 60), PriceSection()],
+      child: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            ItemCart(),
+            const SizedBox(height: 60),
+            PriceSection(),
+            const SizedBox(height: 82),
+            CustomButton(
+              title: 'Checkout',
+              onPressed: () {},
+              backgroundColor: AppColors.yellowBase,
+              titleColor: AppColors.red,
+            ),
+            const SizedBox(height: 82),
+          ],
+        ),
       ),
     );
   }

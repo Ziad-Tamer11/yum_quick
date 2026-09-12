@@ -7,6 +7,8 @@ class CartViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [CustomSideSheetAppBar(), FilledCartViewBody()]);
+    return Column(
+      children: [CustomSideSheetAppBar(), Expanded(child: FilledCartViewBody())],
+    );
   }
 }
