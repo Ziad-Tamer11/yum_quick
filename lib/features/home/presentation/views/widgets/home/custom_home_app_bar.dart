@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/widgets/custom_side_sheet.dart';
 import 'package:yum_quick/features/home/presentation/views/cart_view.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/custom_options_button.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/search_field.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/welcome_text.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/custom_options_button.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/search_field.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/welcome_text.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
   const CustomHomeAppBar({super.key, required this._searchController});

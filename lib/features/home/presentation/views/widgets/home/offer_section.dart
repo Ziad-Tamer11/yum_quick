@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/widgets/custom_dots_indicator.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/offer_card.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/offer_card.dart';
 
 class OfferSection extends StatefulWidget {
   const OfferSection({super.key});

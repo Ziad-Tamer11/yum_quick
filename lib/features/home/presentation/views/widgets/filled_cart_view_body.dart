@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/widgets/custom_button.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/cart/item_cartsection.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/cart/price_section.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/item_cartsection.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/price_Section.dart';
 
 class FilledCartViewBody extends StatelessWidget {
   const FilledCartViewBody({super.key});

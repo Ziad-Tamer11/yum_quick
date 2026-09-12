@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/features/home/domain/entities/buttom_navigation_bar_entity.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/navigation_bar_item.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/navigation/navigation_bar_item.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({super.key, required this.onItemTapped});

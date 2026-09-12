@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/category_itemd.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/category_itemd.dart';
 
 class CategoryList extends StatelessWidget {
   const CategoryList({super.key});

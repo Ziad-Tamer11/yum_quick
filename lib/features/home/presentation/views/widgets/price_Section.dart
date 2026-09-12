@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
-import 'package:yum_quick/core/widgets/custom_dashed_line.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/cart/order_summary.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/custom_dashed_line.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/order_summary.dart';
 
 class PriceSection extends StatelessWidget {
   const PriceSection({super.key});

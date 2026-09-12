@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/custom_dashed_line.dart';
+import 'package:yum_quick/core/widgets/custom_dashed_line.dart';
 
 class AdditionalItem extends StatefulWidget {
   const AdditionalItem({super.key, required this.title, required this.value});

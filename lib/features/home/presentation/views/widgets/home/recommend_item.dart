@@ -6,9 +6,9 @@ import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/utils/app_router.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
 import 'package:yum_quick/core/widgets/item_action_buttons.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/favorite_widget.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/price_widget.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/rating_widget.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/favorite_widget.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/price_widget.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/rating_widget.dart';
 
 class RecommendItem extends StatelessWidget {
   const RecommendItem({super.key});

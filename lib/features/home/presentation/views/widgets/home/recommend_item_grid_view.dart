@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/constants.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/recommend_item.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/recommend_item.dart';
 
 class RecommendItemGridView extends StatelessWidget {
   const RecommendItemGridView({super.key});

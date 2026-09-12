@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/widgets/custom_body_container.dart';
 import 'package:yum_quick/core/widgets/custom_divider.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/best_seller_section.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/category_list.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/custom_home_app_bar.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/offer_section.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/recommend_section.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/best_seller_section.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/category_list.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/custom_home_app_bar.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/offer_section.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/recommend_section.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});

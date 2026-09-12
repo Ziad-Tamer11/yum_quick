@@ -5,7 +5,7 @@ import 'package:yum_quick/constants.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/rating_widget.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/rating_widget.dart';
 
 class CustomItemDetailsAppBar extends StatefulWidget {
   const CustomItemDetailsAppBar({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/item_details_view_body.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/item_details/item_details_view_body.dart';
 
 class ItemDetailsView extends StatelessWidget {
   const ItemDetailsView({super.key});

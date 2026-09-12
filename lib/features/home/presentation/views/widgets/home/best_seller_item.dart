@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/price_widget.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/home/price_widget.dart';
 
 class BestSellerItem extends StatelessWidget {
   const BestSellerItem({super.key});
