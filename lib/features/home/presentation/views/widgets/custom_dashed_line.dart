@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomDashedLine extends StatelessWidget {
-  const CustomDashedLine({super.key});
-
+  const CustomDashedLine({super.key, this.color});
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -12,7 +12,7 @@ class CustomDashedLine extends StatelessWidget {
             padding: const EdgeInsets.only(right: 3),
             child: Container(
               height: 2,
-              decoration: BoxDecoration(color: Color(0xffFFD8C7)),
+              decoration: BoxDecoration(color: color ?? Color(0xffFFD8C7)),
             ),
           ),
         );
