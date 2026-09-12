@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 
-class CartItemActionButton extends StatelessWidget {
-  const CartItemActionButton({
+class ItemActionButton extends StatelessWidget {
+  const ItemActionButton({
     super.key,
     required this.icon,
     required this.color,
     required this.onTap,
+    required this.width,
+    required this.height,
+    this.iconSize,
   });
   final IconData icon;
   final Color color;
   final VoidCallback onTap;
+  final double width, height;
+  final double? iconSize;
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -20,15 +26,15 @@ class CartItemActionButton extends StatelessWidget {
         customBorder: const CircleBorder(),
         onTap: onTap,
         child: Container(
-          width: 17,
-          height: 17,
+          width: width,
+          height: height,
           decoration: ShapeDecoration(
             color: color,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
             ),
           ),
-          child: Icon((icon), size: 16, color: AppColors.secondaryFont),
+          child: Icon((icon), size: iconSize, color: AppColors.secondaryFont),
         ),
       ),
     );

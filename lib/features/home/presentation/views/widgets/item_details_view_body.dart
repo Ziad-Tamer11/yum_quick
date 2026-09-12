@@ -6,9 +6,9 @@ import 'package:yum_quick/core/utils/app_text_styles.dart';
 import 'package:yum_quick/core/widgets/custom_body_container.dart';
 import 'package:yum_quick/core/widgets/custom_divider.dart';
 import 'package:yum_quick/core/widgets/custom_item_details_app_bar.dart';
+import 'package:yum_quick/core/widgets/item_action_buttons.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/add_to_cart_button.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/additional_item_section.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/item_details_action_buttons.dart';
 
 class ItemDetailsViewBody extends StatelessWidget {
   const ItemDetailsViewBody({super.key});
@@ -51,7 +51,12 @@ class ItemDetailsViewBody extends StatelessWidget {
                         ),
                       ),
                       Spacer(),
-                      ItemDetailsActionButtons(),
+                      ItemActionButtons(
+                        textStyle: TextStyles.regular24,
+                        width: 27,
+                        height: 27,
+                        spacing: 15,
+                      ),
                     ],
                   ),
                   CustomDivider(),

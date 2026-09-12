@@ -5,7 +5,7 @@ import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/utils/app_router.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/cart_item_action_buttons.dart';
+import 'package:yum_quick/core/widgets/item_action_buttons.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/favorite_widget.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/price_widget.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/rating_widget.dart';
@@ -80,7 +80,13 @@ class RecommendItem extends StatelessWidget {
               style: TextStyles.medium20.copyWith(color: AppColors.orangeBase),
             ),
             const SizedBox(width: 9),
-            CartItemActionButtons(),
+            ItemActionButtons(
+              textStyle: TextStyles.regular15,
+              width: 17,
+              height: 17,
+              iconSize: 16,
+              spacing: 5,
+            ),
             const SizedBox(width: 8),
             Container(
               width: 19,
