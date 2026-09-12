@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/custom_dashed_line.dart';
 
 class AdditionalItem extends StatelessWidget {
   const AdditionalItem({super.key, required this.title, required this.value});
@@ -15,7 +16,12 @@ class AdditionalItem extends StatelessWidget {
           title,
           style: TextStyles.light14.copyWith(color: AppColors.primaryFont),
         ),
-        Spacer(),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: CustomDashedLine(),
+          ),
+        ),
         Text(
           '\$$value',
           style: TextStyles.light12.copyWith(color: AppColors.primaryFont),
