@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:yum_quick/features/auth/presentation/views/login_view.dart';
 import 'package:yum_quick/features/auth/presentation/views/sign_up_view.dart';
 import 'package:yum_quick/features/home/presentation/views/home_view.dart';
+import 'package:yum_quick/features/home/presentation/views/item_details_view.dart';
 import 'package:yum_quick/features/home/presentation/views/main_view.dart';
 import 'package:yum_quick/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:yum_quick/features/splash/presentation/view/splash_view.dart';
@@ -15,6 +16,7 @@ class AppRouter {
   static const kSignUpViewView = '/signUpViewView';
   static const kHomeViewView = '/homeViewView';
   static const kMainViewView = '/mainViewView';
+  static const kItemDetailsView = '/itemDetailsView';
 
   static CustomTransitionPage _slideFadePage(LocalKey key, Widget child) {
     return CustomTransitionPage(
@@ -75,6 +77,11 @@ class AppRouter {
         path: kMainViewView,
         pageBuilder: (context, state) =>
             _slideFadePage(state.pageKey, const MainView()),
+      ),
+      GoRoute(
+        path: kItemDetailsView,
+        pageBuilder: (context, state) =>
+            _slideFadePage(state.pageKey, const ItemDetailsView()),
       ),
     ],
   );

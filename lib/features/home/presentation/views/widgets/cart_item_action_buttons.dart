@@ -22,9 +22,9 @@ class _CartItemActionButtonsState extends State<CartItemActionButtons> {
       children: [
         CartItemActionButton(
           icon: Icons.remove,
-          color: quantity > 1 ? AppColors.orangeBase : AppColors.orangeLight,
+          color: quantity >= 1 ? AppColors.orangeBase : AppColors.orangeLight,
           onTap: () {
-            if (quantity > 1) setState(() => quantity--);
+            if (quantity >= 1) setState(() => quantity--);
           },
         ),
         Text(

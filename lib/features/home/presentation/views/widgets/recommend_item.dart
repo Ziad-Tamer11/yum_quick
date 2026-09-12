@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yum_quick/core/utils/app_colors.dart';
 import 'package:yum_quick/core/utils/app_images.dart';
+import 'package:yum_quick/core/utils/app_router.dart';
 import 'package:yum_quick/core/utils/app_text_styles.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/cart_item_action_buttons.dart';
 import 'package:yum_quick/features/home/presentation/views/widgets/favorite_widget.dart';
@@ -25,35 +27,40 @@ class _RecommendItemState extends State<RecommendItem> {
       children: [
         AspectRatio(
           aspectRatio: 159 / 140,
-          child: Container(
-            decoration: ShapeDecoration(
-              image: DecorationImage(
-                image: AssetImage(Assets.imagesRecommend),
-                fit: BoxFit.cover,
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-            ),
-            child: Stack(
-              children: [
-                PriceWidget(),
-                Positioned(
-                  top: 10,
-                  left: 13,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    spacing: 5,
-                    children: [
-                      RatingWidget(),
-                      FavoriteWidget(
-                        isFavorite: isFavorite,
-                        onTap: () => setState(() => isFavorite = !isFavorite),
-                      ),
-                    ],
-                  ),
+          child: GestureDetector(
+            onTap: () {
+              context.push(AppRouter.kItemDetailsView);
+            },
+            child: Container(
+              decoration: ShapeDecoration(
+                image: DecorationImage(
+                  image: AssetImage(Assets.imagesRecommend),
+                  fit: BoxFit.cover,
                 ),
-              ],
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              child: Stack(
+                children: [
+                  PriceWidget(),
+                  Positioned(
+                    top: 10,
+                    left: 13,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      spacing: 5,
+                      children: [
+                        RatingWidget(),
+                        FavoriteWidget(
+                          isFavorite: isFavorite,
+                          onTap: () => setState(() => isFavorite = !isFavorite),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
