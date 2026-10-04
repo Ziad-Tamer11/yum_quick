@@ -5,6 +5,7 @@ import 'package:yum_quick/features/auth/presentation/views/sign_up_view.dart';
 import 'package:yum_quick/features/home/presentation/views/home_view.dart';
 import 'package:yum_quick/features/home/presentation/views/item_details_view.dart';
 import 'package:yum_quick/features/home/presentation/views/main_view.dart';
+import 'package:yum_quick/features/home/presentation/views/widgets/checkout/checkoutview.dart';
 import 'package:yum_quick/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:yum_quick/features/splash/presentation/view/splash_view.dart';
 import 'package:yum_quick/features/splash/presentation/view/welcome_splash_view.dart';
@@ -17,6 +18,7 @@ class AppRouter {
   static const kHomeViewView = '/homeViewView';
   static const kMainViewView = '/mainViewView';
   static const kItemDetailsView = '/itemDetailsView';
+  static const kCheckoutView = '/checkoutView';
 
   static CustomTransitionPage _slideFadePage(LocalKey key, Widget child) {
     return CustomTransitionPage(
@@ -82,6 +84,11 @@ class AppRouter {
         path: kItemDetailsView,
         pageBuilder: (context, state) =>
             _slideFadePage(state.pageKey, const ItemDetailsView()),
+      ),
+      GoRoute(
+        path: kCheckoutView,
+        pageBuilder: (context, state) =>
+            _slideFadePage(state.pageKey, const Checkoutview()),
       ),
     ],
   );
