@@ -5,40 +5,6 @@ import 'package:yum_quick/core/utils/app_text_styles.dart';
 import 'package:yum_quick/core/widgets/custom_divider.dart';
 import 'package:yum_quick/core/widgets/item_action_buttons.dart';
 
-class ItemCartSection extends StatelessWidget {
-  const ItemCartSection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'You have 2  items in the cart',
-          style: TextStyles.medium20.copyWith(color: AppColors.secondaryFont),
-        ),
-        const SizedBox(height: 26),
-        ItemCartListView(),
-      ],
-    );
-  }
-}
-
-class ItemCartListView extends StatelessWidget {
-  const ItemCartListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: 2,
-      itemBuilder: (BuildContext context, int index) {
-        return ItemCart();
-      },
-    );
-  }
-}
-
 class ItemCart extends StatelessWidget {
   const ItemCart({super.key});
 
