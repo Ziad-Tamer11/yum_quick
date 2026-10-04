@@ -5,7 +5,7 @@ import 'package:yum_quick/features/auth/presentation/views/sign_up_view.dart';
 import 'package:yum_quick/features/home/presentation/views/home_view.dart';
 import 'package:yum_quick/features/home/presentation/views/item_details_view.dart';
 import 'package:yum_quick/features/home/presentation/views/main_view.dart';
-import 'package:yum_quick/features/home/presentation/views/widgets/checkout/checkoutview.dart';
+import 'package:yum_quick/features/home/presentation/views/checkoutview.dart';
 import 'package:yum_quick/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:yum_quick/features/splash/presentation/view/splash_view.dart';
 import 'package:yum_quick/features/splash/presentation/view/welcome_splash_view.dart';
